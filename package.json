@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node build/index.js",
+    "dev": "nodemon --watch"
+  },
+  "dependencies": {
+    "fastify": "^4.24.3",
+    "fastify-cli": "^5.9.0",
+    "nodemon": "^3.0.2"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.2",
+    "@types/node": "^20.10.4",
+    "typescript": "^5.3.3"
+  }
+}

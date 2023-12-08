@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "lib": ["es2023"],
+    "target": "es2017",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./build"
+  }
+}
