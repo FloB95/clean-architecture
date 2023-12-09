@@ -1,8 +1,7 @@
-import { BadRequestError } from '../../errors'
-import { makeApiHttpResponse } from '../../helpers/http'
-import { IHttpRequest, IHttpResponse } from '../core/interfaces/request'
+import { BadRequestError } from '../../core/errors'
+import { makeApiHttpResponse } from '../../core/helpers/http'
+import { IHttpRequest, IHttpResponse } from '../../core/interfaces/request'
 import { IPostCreateDTO } from './interfaces'
-import Post from './post'
 import PostService from './service'
 
 export class PostController {
@@ -16,14 +15,7 @@ export class PostController {
       }
 
       // create post with hooks
-      const post = await this.postService.create(postDTO, {
-        preSave: async (data: IPostCreateDTO) => {
-          console.log('pre-save hook', data)
-        },
-        postSave: async (post: Post) => {
-          console.log('post-save hook', post)
-        },
-      })
+      const post = await this.postService.create(postDTO)
 
       return makeApiHttpResponse(201, post)
     } catch (error: any) {

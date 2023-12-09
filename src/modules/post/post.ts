@@ -1,20 +1,13 @@
-import IEntity from '../core/interfaces/entity'
+import { ABaseEntity } from '../../core/classes/AbstractEntity'
 import User from '../user/user'
 import { IPostCreateDTO } from './interfaces'
 
-class Post implements IEntity {
-  private _id: string = ''
+class Post extends ABaseEntity {
   private _title: string = ''
   private _content: string = ''
   private _author: User = new User()
-  private _createdAt: Date = new Date()
-  private _updatedAt: Date | null = null
 
   // getters
-  get id(): string {
-    return this._id
-  }
-
   get title(): string {
     return this._title
   }
@@ -27,19 +20,7 @@ class Post implements IEntity {
     return this._author
   }
 
-  get createdAt(): Date {
-    return this._createdAt
-  }
-
-  get updatedAt(): Date | null {
-    return this._updatedAt
-  }
-
   // setters
-  set id(value: string) {
-    this._id = value
-  }
-
   set title(value: string) {
     this._title = value
   }
@@ -52,14 +33,6 @@ class Post implements IEntity {
     this._author = value
   }
 
-  set createdAt(value: Date) {
-    this._createdAt = value
-  }
-
-  set updatedAt(value: Date | null) {
-    this._updatedAt = value
-  }
-
   static create({ title, content }: IPostCreateDTO): Post {
     const post = new Post()
     post.id = '12312312' // You should generate a unique ID here
@@ -69,6 +42,7 @@ class Post implements IEntity {
     post.updatedAt = null
     return post
   }
+
 }
 
 export default Post

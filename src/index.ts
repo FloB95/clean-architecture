@@ -1,10 +1,14 @@
 import Fastify from 'fastify'
+import { fastifyErrorHandler, fastifyRequestParser } from './core/lib/fastify'
 import postHandlingController from './modules/post'
-import { fastifyErrorHandler, fastifyRequestParser } from './lib/fastify'
 
 const fastify = Fastify({
   logger: true,
 })
+
+// localEventQueue.subscribe('postCreated', (data: Post) => {
+//   console.log('postCreated', data)
+// })
 
 fastify.setErrorHandler(fastifyErrorHandler)
 
