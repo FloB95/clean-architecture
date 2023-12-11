@@ -1,6 +1,7 @@
-import { EventQueue } from '../../core/interfaces/event'
-import { IPostCreateDTO, IPostRepository } from './interfaces'
-import Post from './post'
+import { EventQueue } from '../interfaces/events/EventQueue'
+import Post from '../entities/Post'
+import { IPostRepository } from '../interfaces/repositories/PostRepository'
+import { IPostCreateDTO } from '../interfaces/dtos/PostDto'
 
 // application layer
 class PostService {

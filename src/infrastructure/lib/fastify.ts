@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from 'fastify'
-import { CustomAPIError } from '../errors'
-import { IHttpRequest } from '../interfaces/request'
+import { IHttpRequest } from '../../core/interfaces/http/Request'
+import { CustomAPIError } from '../../core/errors/api'
 
 export const fastifyRequestParser = (request: FastifyRequest): IHttpRequest => {
   const { body, params, query, headers } = request

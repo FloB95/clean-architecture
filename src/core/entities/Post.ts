@@ -1,8 +1,8 @@
-import { ABaseEntity } from '../../core/classes/AbstractEntity'
-import User from '../user/user'
-import { IPostCreateDTO } from './interfaces'
+import { IPostCreateDTO } from '../interfaces/dtos/PostDto'
+import { AbstractEntity } from './AbstractEntity'
+import User from './User'
 
-class Post extends ABaseEntity {
+class Post extends AbstractEntity {
   private _title: string = ''
   private _content: string = ''
   private _author: User = new User()
@@ -42,7 +42,6 @@ class Post extends ABaseEntity {
     post.updatedAt = null
     return post
   }
-
 }
 
 export default Post

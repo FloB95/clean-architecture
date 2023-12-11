@@ -1,7 +1,7 @@
-export abstract class ABaseEntity {
-  protected _id: string = ''
-  protected _createdAt: Date = new Date()
-  protected _updatedAt: Date | null = null
+export abstract class AbstractEntity {
+  private _id: string = ''
+  private _createdAt: Date = new Date()
+  private _updatedAt: Date | null = null
 
   // getters
   get id(): string {

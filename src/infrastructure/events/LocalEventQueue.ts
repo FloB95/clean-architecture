@@ -1,4 +1,4 @@
-import { EventName, EventQueue } from '../interfaces/event'
+import { EventName, EventQueue } from '../../core/interfaces/events/EventQueue'
 
 // infrastructure layer
 class LocalEventQueue implements EventQueue {

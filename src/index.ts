@@ -1,6 +1,6 @@
 import Fastify from 'fastify'
-import { fastifyErrorHandler, fastifyRequestParser } from './core/lib/fastify'
-import postHandlingController from './modules/post'
+import { fastifyErrorHandler, fastifyRequestParser } from './infrastructure/lib/fastify'
+import postHandlingController from './main/factories/PostControllerFactory'
 
 const fastify = Fastify({
   logger: true,

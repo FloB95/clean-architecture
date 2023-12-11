@@ -1,4 +1,4 @@
-import { PostEventName } from '../../modules/post/events'
+import { PostEventName } from "./PostEvents"
 
 export type EventName = PostEventName
 

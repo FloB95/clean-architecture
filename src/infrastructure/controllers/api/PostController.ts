@@ -1,8 +1,8 @@
-import { BadRequestError } from '../../core/errors'
-import { makeApiHttpResponse } from '../../core/helpers/http'
-import { IHttpRequest, IHttpResponse } from '../../core/interfaces/request'
-import { IPostCreateDTO } from './interfaces'
-import PostService from './service'
+import { BadRequestError } from '../../../core/errors/api'
+import { IPostCreateDTO } from '../../../core/interfaces/dtos/PostDto'
+import { IHttpRequest, IHttpResponse } from '../../../core/interfaces/http/Request'
+import PostService from '../../../core/services/PostService'
+import { makeApiHttpResponse } from '../../utils/http'
 
 export class PostController {
   constructor(private postService: PostService) {}

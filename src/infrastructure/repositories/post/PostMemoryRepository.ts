@@ -1,9 +1,9 @@
-import { IPostRepository } from './interfaces'
-import Post from './post'
+import Post from '../../../core/entities/Post'
+import { IPostRepository } from '../../../core/interfaces/repositories/PostRepository'
 
 const posts: Post[] = []
 
-class PostRepository implements IPostRepository {
+class PostMemoryRepository implements IPostRepository {
   constructor() {}
 
   findAll(): Promise<Post[]> {
@@ -44,4 +44,4 @@ class PostRepository implements IPostRepository {
   }
 }
 
-export default PostRepository
+export default PostMemoryRepository
