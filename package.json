@@ -4,14 +4,21 @@
     "start": "node build/index.js",
     "dev": "nodemon --watch"
   },
+  "prisma": {
+    "schema": "./src/infrastructure/db/prisma/schema.prisma"
+  },
   "dependencies": {
+    "@prisma/client": "^5.7.0",
+    "drizzle-orm": "^0.29.1",
     "fastify": "^4.24.3",
     "fastify-cli": "^5.9.0",
+    "mysql2": "^3.6.5",
     "nodemon": "^3.0.2"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.2",
     "@types/node": "^20.10.4",
+    "prisma": "^5.7.0",
     "typescript": "^5.3.3"
   }
 }

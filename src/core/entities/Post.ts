@@ -40,6 +40,7 @@ class Post extends AbstractEntity {
     post.content = content
     post.createdAt = new Date()
     post.updatedAt = null
+    post._author.id = 'adsadsl123ksadklasdkla123' // You should generate a unique ID here
     return post
   }
 }
