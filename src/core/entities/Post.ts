@@ -35,7 +35,6 @@ class Post extends AbstractEntity {
 
   static create({ title, content }: IPostCreateDTO): Post {
     const post = new Post()
-    post.id = '12312312' // You should generate a unique ID here
     post.title = title
     post.content = content
     post.createdAt = new Date()

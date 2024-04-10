@@ -1,10 +1,10 @@
 export abstract class AbstractEntity {
-  private _id: string = ''
+  private _id: string | undefined = undefined
   private _createdAt: Date = new Date()
   private _updatedAt: Date | null = null
 
   // getters
-  get id(): string {
+  get id(): string | undefined {
     return this._id
   }
 

@@ -1,4 +1,3 @@
-import { pgTable } from 'drizzle-orm/pg-core'
 import { relations } from 'drizzle-orm'
 import { varchar, text, date, mysqlTable } from 'drizzle-orm/mysql-core'
 

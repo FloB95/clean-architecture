@@ -1,4 +1,4 @@
-import { BadRequestError } from '../../../core/errors/api'
+import { BadRequestError } from '../errors'
 import { IPostCreateDTO } from '../../../core/interfaces/dtos/PostDto'
 import { IHttpRequest, IHttpResponse } from '../../../core/interfaces/http/Request'
 import PostService from '../../../core/services/PostService'
